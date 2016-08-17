@@ -11,30 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('./hero.service');
-var HeroDetailComponent = (function () {
-    function HeroDetailComponent(heroService, route) {
+var HeroesComponent = (function () {
+    function HeroesComponent(router, heroService) {
+        this.router = router;
         this.heroService = heroService;
-        this.route = route;
     }
-    HeroDetailComponent.prototype.ngOnInit = function () {
+    HeroesComponent.prototype.getHeroes = function () {
         var _this = this;
-        this.route.params.forEach(function (params) {
-            var id = +params['id'];
-            _this.heroService.getHero(id)
-                .then(function (hero) { return _this.hero = hero; });
-        });
+        this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
     };
-    HeroDetailComponent.prototype.goBack = function () {
-        window.history.back();
+    HeroesComponent.prototype.ngOnInit = function () {
+        this.getHeroes();
     };
-    HeroDetailComponent = __decorate([
+    HeroesComponent.prototype.onSelect = function (hero) { this.selectedHero = hero; };
+    HeroesComponent.prototype.gotoDetail = function () {
+        this.router.navigate(['/detail', this.selectedHero.id]);
+    };
+    HeroesComponent = __decorate([
         core_1.Component({
-            selector: 'my-hero-detail',
-            templateUrl: 'app/hero-detail.component.html',
+            selector: 'my-heroes',
+            templateUrl: 'app/heroes.component.html',
+            styleUrls: ['app/heroes.component.css']
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute])
-    ], HeroDetailComponent);
-    return HeroDetailComponent;
+        __metadata('design:paramtypes', [router_1.Router, hero_service_1.HeroService])
+    ], HeroesComponent);
+    return HeroesComponent;
 }());
-exports.HeroDetailComponent = HeroDetailComponent;
-//# sourceMappingURL=hero-detail.component.js.map
+exports.HeroesComponent = HeroesComponent;
+//# sourceMappingURL=heroes.component.js.map

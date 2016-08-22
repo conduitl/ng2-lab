@@ -1,5 +1,6 @@
 # ng2-lab
 A sandbox to test angular features and components. Each study starts using the completed files from one of the angular.io tutorials.
+Project page: https://conduitl.github.io/ng2-lab/
 
 * __rc5-quickstart__ includes completed files from the angular.io RC5 Quick Start documentation.
 

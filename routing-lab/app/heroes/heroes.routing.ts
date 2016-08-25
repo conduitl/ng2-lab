@@ -5,7 +5,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 
 const heroesRoutes: Routes = [
     { path: 'heroes', component: HeroListComponent },
-    { path: 'hero:id', component: HeroDetailComponent }
+    { path: 'hero/:id', component: HeroDetailComponent }
 ];
 
 export const heroesRouting = RouterModule.forChild(heroesRoutes);

@@ -12,17 +12,16 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
-var hero_list_component_1 = require('./hero-list.component');
+var heroes_module_1 = require('./heroes/heroes.module');
 var crisis_list_component_1 = require('./crisis-list.component');
-var hero_detail_component_1 = require('./hero-detail.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, hero_list_component_1.HeroListComponent, crisis_list_component_1.CrisisListComponent, hero_detail_component_1.HeroDetailComponent, page_not_found_component_1.PageNotFoundComponent],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, heroes_module_1.HeroesModule],
+            declarations: [app_component_1.AppComponent, crisis_list_component_1.CrisisListComponent, page_not_found_component_1.PageNotFoundComponent],
             providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]
         }), 

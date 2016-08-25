@@ -14,6 +14,7 @@ var forms_1 = require('@angular/forms');
 var hero_list_component_1 = require('./hero-list.component');
 var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
+var heroes_routing_1 = require('./heroes.routing');
 var HeroesModule = (function () {
     function HeroesModule() {
     }
@@ -21,7 +22,8 @@ var HeroesModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                heroes_routing_1.heroesRouting
             ],
             declarations: [
                 hero_list_component_1.HeroListComponent,

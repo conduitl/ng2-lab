@@ -9,15 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var hero_service_1 = require('./hero.service');
 var HeroDetailComponent = (function () {
-    function HeroDetailComponent() {
+    function HeroDetailComponent(route, router, service) {
+        this.route = route;
+        this.router = router;
+        this.service = service;
     }
+    HeroDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = +params['id'];
+            _this.service.getHero(id).then(function (hero) { return _this.hero = hero; });
+        });
+    };
+    HeroDetailComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
+    HeroDetailComponent.prototype.gotoHeroes = function () { this.router.navigate(['/heroes']); };
     HeroDetailComponent = __decorate([
         core_1.Component({
-            selector: 'hero-detail',
-            template: "\n    <h1>Hero Detail</h1>\n  "
+            template: "\n  <h2>HEROES</h2>\n  <div *ngIf=\"hero\">\n    <h3>\"{{hero.name}}\"</h3>\n    <div>\n      <label>Id: </label>{{hero.id}}</div>\n    <div>\n      <label>Name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n    <p>\n      <button (click)=\"gotoHeroes()\">Back</button>\n    </p>\n  </div>\n  "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, hero_service_1.HeroService])
     ], HeroDetailComponent);
     return HeroDetailComponent;
 }());

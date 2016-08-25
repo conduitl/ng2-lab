@@ -7,10 +7,13 @@ import { HeroDetailComponent } from './hero-detail.component';
 
 import { HeroService } from './hero.service';
 
+import { heroesRouting } from './heroes.routing';
+
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        heroesRouting
     ],
     declarations: [
         HeroListComponent,

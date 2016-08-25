@@ -1,8 +1,6 @@
 "use strict";
 var router_1 = require('@angular/router');
 var crisis_list_component_1 = require('./crisis-list.component');
-var hero_list_component_1 = require('./hero-list.component');
-var hero_detail_component_1 = require('./hero-detail.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 var appRoutes = [
     {
@@ -12,16 +10,6 @@ var appRoutes = [
     },
     {
         path: 'crisis-list', component: crisis_list_component_1.CrisisListComponent
-    },
-    { path: 'heroes',
-        component: hero_list_component_1.HeroListComponent,
-        data: {
-            title: 'Heroes List'
-        }
-    },
-    {
-        path: 'hero/:id',
-        component: hero_detail_component_1.HeroDetailComponent
     },
     {
         path: '**',

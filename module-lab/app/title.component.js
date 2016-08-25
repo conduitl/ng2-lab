@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var user_service_1 = require('./user.service');
 var TitleComponent = (function () {
-    function TitleComponent() {
+    function TitleComponent(userService) {
         this.subtitle = '';
         this.title = 'Angular Modules';
+        this.user = '';
+        this.user = userService.userName;
     }
     __decorate([
         core_1.Input(), 
@@ -21,9 +24,9 @@ var TitleComponent = (function () {
     TitleComponent = __decorate([
         core_1.Component({
             selector: 'app-title',
-            template: '<h1 highlight>{{title}} {{subtitle}}</h1>'
+            template: "\n        <h1 highlight>{{title}} {{subtitle}}</h1>\n        <p *ngIf=\"user\">\n            <i> Welcome, {{user}}</i>\n        </p>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [user_service_1.UserService])
     ], TitleComponent);
     return TitleComponent;
 }());

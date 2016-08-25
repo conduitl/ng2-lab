@@ -9,24 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var title_component_1 = require('./title.component');
-var highlight_directive_1 = require('./highlight.directive');
-var user_service_1 = require('./user.service');
-var AppModule = (function () {
-    function AppModule() {
+var UserService = (function () {
+    function UserService() {
+        this.userName = 'Same Spade';
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, highlight_directive_1.HighlightDirective, title_component_1.TitleComponent],
-            providers: [user_service_1.UserService],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
+    UserService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], UserService);
+    return UserService;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.UserService = UserService;
+//# sourceMappingURL=user.service.js.map

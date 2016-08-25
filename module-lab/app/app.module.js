@@ -12,20 +12,17 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 /* App Root */
 var app_component_1 = require('./app.component');
-var title_component_1 = require('./title.component');
-var highlight_directive_1 = require('./highlight.directive');
-var user_service_1 = require('./user.service');
 /* Feature Modules */
 var contact_module_1 = require('./contact/contact.module');
+var shared_module_1 = require('./shared/shared.module');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, contact_module_1.ContactModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, highlight_directive_1.HighlightDirective, title_component_1.TitleComponent],
-            providers: [user_service_1.UserService],
+            imports: [platform_browser_1.BrowserModule, contact_module_1.ContactModule, app_routing_1.routing, shared_module_1.SharedModule.forRoot()],
+            declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

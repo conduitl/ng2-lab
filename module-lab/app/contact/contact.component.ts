@@ -1,6 +1,6 @@
 import { Component, OnInit }      from '@angular/core';
 import { Contact, ContactService } from './contact.service';
-import { UserService }    from '../user.service';
+import { UserService }    from '../shared/user.service';
 @Component({
   selector: 'app-contact',
   templateUrl: 'app/contact/contact.component.html',

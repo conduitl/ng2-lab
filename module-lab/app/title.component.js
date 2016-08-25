@@ -9,22 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var title_component_1 = require('./title.component');
-var highlight_directive_1 = require('./highlight.directive');
-var AppModule = (function () {
-    function AppModule() {
+var TitleComponent = (function () {
+    function TitleComponent() {
+        this.subtitle = '';
+        this.title = 'Angular Modules';
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, highlight_directive_1.HighlightDirective, title_component_1.TitleComponent],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], TitleComponent.prototype, "subtitle", void 0);
+    TitleComponent = __decorate([
+        core_1.Component({
+            selector: 'app-title',
+            template: '<h1 highlight>{{title}} {{subtitle}}</h1>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], TitleComponent);
+    return TitleComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.TitleComponent = TitleComponent;
+//# sourceMappingURL=title.component.js.map

@@ -7,11 +7,13 @@ import { TitleComponent } from './title.component';
 import { HighlightDirective } from './highlight.directive';
 import { UserService } from './user.service';
 
-/* Contact Imports */
+/* Feature Modules */
 import { ContactModule } from './contact/contact.module'
 
+import { routing } from './app.routing';
+
 @NgModule({
-  imports:      [ BrowserModule, ContactModule ],
+  imports:      [ BrowserModule, ContactModule, routing ],
   declarations: [ AppComponent, HighlightDirective, TitleComponent ],
   providers:    [ UserService ],
   bootstrap:    [ AppComponent ]

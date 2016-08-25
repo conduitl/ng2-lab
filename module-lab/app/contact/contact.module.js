@@ -15,15 +15,15 @@ var awesome_pipe_1 = require('./awesome.pipe');
 var contact_component_1 = require('./contact.component');
 var highlight_directive_1 = require('./highlight.directive');
 var contact_service_1 = require('./contact.service');
+var contact_routing_1 = require('./contact.routing');
 var ContactModule = (function () {
     function ContactModule() {
     }
     ContactModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule],
+            imports: [common_1.CommonModule, forms_1.FormsModule, contact_routing_1.routing],
             declarations: [contact_component_1.ContactComponent, highlight_directive_1.HighlightDirective, awesome_pipe_1.AwesomePipe],
-            providers: [contact_component_1.ContactComponent],
-            bootstrap: [contact_service_1.ContactService]
+            providers: [contact_service_1.ContactService]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactModule);

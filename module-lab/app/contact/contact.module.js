@@ -9,27 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-/* App Root */
-var app_component_1 = require('./app.component');
-var title_component_1 = require('./title.component');
+var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
+var awesome_pipe_1 = require('./awesome.pipe');
+var contact_component_1 = require('./contact.component');
 var highlight_directive_1 = require('./highlight.directive');
-var user_service_1 = require('./user.service');
-/* Contact Imports */
-var contact_module_1 = require('./contact/contact.module');
-var AppModule = (function () {
-    function AppModule() {
+var contact_service_1 = require('./contact.service');
+var ContactModule = (function () {
+    function ContactModule() {
     }
-    AppModule = __decorate([
+    ContactModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, contact_module_1.ContactModule],
-            declarations: [app_component_1.AppComponent, highlight_directive_1.HighlightDirective, title_component_1.TitleComponent],
-            providers: [user_service_1.UserService],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [common_1.CommonModule, forms_1.FormsModule],
+            declarations: [contact_component_1.ContactComponent, highlight_directive_1.HighlightDirective, awesome_pipe_1.AwesomePipe],
+            providers: [contact_component_1.ContactComponent],
+            bootstrap: [contact_service_1.ContactService]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ContactModule);
+    return ContactModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ContactModule = ContactModule;
+//# sourceMappingURL=contact.module.js.map

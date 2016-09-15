@@ -4,15 +4,14 @@ const http = require('http');
 
 const app = express();
 
-app.use('/', express.static(path.join(__dirname, 'public')));
+let ngAppPath = path.join(__dirname, '..', 'rc7_quickstart'); 
+let nodeModulesPath = path.join(__dirname, '..', 'rc7_quickstart', 'node_modules');
+
+app.use('/', express.static(ngAppPath));
+app.use('/node_modules', express.static(nodeModulesPath));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'hello.html'));
-});
-
-app.use( (req, res) => {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end('Looks like you didn\'t find a static file');
+    res.sendFile(path.join(__dirname, '..', 'rc7_quickstart', 'index.html'));
 });
 
 http.createServer(app).listen(3000);

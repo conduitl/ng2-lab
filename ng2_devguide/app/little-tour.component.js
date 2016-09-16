@@ -9,23 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var KeyUpComponent = (function () {
-    function KeyUpComponent() {
-        this.values = '';
-        this.values2 = '';
+var LittleTourComponent = (function () {
+    function LittleTourComponent() {
+        this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
     }
-    // without strong typing
-    KeyUpComponent.prototype.onKey = function (value) {
-        this.values += value + ' | ';
+    LittleTourComponent.prototype.addHero = function (newHero) {
+        if (newHero) {
+            this.heroes.push(newHero);
+        }
     };
-    KeyUpComponent = __decorate([
+    LittleTourComponent = __decorate([
         core_1.Component({
-            selector: 'key-up',
-            template: "\n        <h2>keyup examples</h2>\n        <h3>captures all keyup events</h3>\n        <input #box (keyup)=\"onKey(box.value)\">\n        <p>{{values}}</p>\n        <h3>press [enter] when done or click elsewhere on page</h3>\n        <input #box2 \n            (keyup.enter)=\"values2=box2.value\"\n            (blur)=\"values2=box2.value\">\n        <p>{{values2}}</p>\n    "
+            selector: 'little-tour',
+            template: "\n        <h1>Little Tour</h1>\n        <input #newHero\n            (keyup.enter)=\"addHero(newHero.value)\"\n            (blur)=\"addHero(newHero.value); newHero.value='' \">\n        \n        <button (click)=addHero(newHero.value)>Add</button>\n        <ul><li *ngFor=\"let hero of heroes\">{{hero}}</li></ul>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], KeyUpComponent);
-    return KeyUpComponent;
+    ], LittleTourComponent);
+    return LittleTourComponent;
 }());
-exports.KeyUpComponent = KeyUpComponent;
-//# sourceMappingURL=keyup.component.js.map
+exports.LittleTourComponent = LittleTourComponent;
+//# sourceMappingURL=little-tour.component.js.map

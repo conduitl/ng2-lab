@@ -14,6 +14,7 @@ var app_component_1 = require('./app.component');
 var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');
 var loop_back_component_1 = require('./loop-back.component');
+var little_tour_component_1 = require('./little-tour.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +25,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 click_me_component_1.ClickMeComponent,
                 keyup_component_1.KeyUpComponent,
-                loop_back_component_1.LoopbackComponent
+                loop_back_component_1.LoopbackComponent,
+                little_tour_component_1.LittleTourComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

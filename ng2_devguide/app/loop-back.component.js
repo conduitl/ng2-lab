@@ -15,7 +15,7 @@ var LoopbackComponent = (function () {
     LoopbackComponent = __decorate([
         core_1.Component({
             selector: 'loop-back',
-            template: "\n        <h3>Loopback Example</h3>\n        <input #box (keyup)=\"0\">\n        <p>{{box.value}}</p>\n    "
+            template: "\n        <h3>loopback example</h3>\n        <input #box (keyup)=\"0\">\n        <p>{{box.value}}</p>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], LoopbackComponent);

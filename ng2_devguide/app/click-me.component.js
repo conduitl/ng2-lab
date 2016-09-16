@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var click_me_component_1 = require('./click-me.component');
-var AppModule = (function () {
-    function AppModule() {
+var ClickMeComponent = (function () {
+    function ClickMeComponent() {
+        this.clickMessage = '';
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, click_me_component_1.ClickMeComponent],
-            bootstrap: [app_component_1.AppComponent]
+    ClickMeComponent.prototype.onClickMe = function () {
+        this.clickMessage = 'You are my hero!';
+    };
+    ClickMeComponent = __decorate([
+        core_1.Component({
+            selector: 'click-me',
+            template: "\n        <button (click)=\"onClickMe()\">Click me!</button>\n        {{clickMessage}}\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ClickMeComponent);
+    return ClickMeComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ClickMeComponent = ClickMeComponent;
+//# sourceMappingURL=click-me.component.js.map

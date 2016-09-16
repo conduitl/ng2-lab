@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var LoopbackComponent = (function () {
+    function LoopbackComponent() {
     }
-    AppComponent = __decorate([
+    LoopbackComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>My First Angular 2 App</h1>\n    <click-me></click-me>\n    <key-up></key-up>\n    <loop-back></loop-back>\n  "
+            selector: 'loop-back',
+            template: "\n        <h3>Loopback Example</h3>\n        <input #box (keyup)=\"0\">\n        <p>{{box.value}}</p>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LoopbackComponent);
+    return LoopbackComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LoopbackComponent = LoopbackComponent;
+//# sourceMappingURL=loop-back.component.js.map

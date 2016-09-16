@@ -9,17 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var KeyUpComponent = (function () {
+    function KeyUpComponent() {
+        this.values = '';
     }
-    AppComponent = __decorate([
+    // without strong typing
+    KeyUpComponent.prototype.onKey = function (value) {
+        this.values += value + ' | ';
+    };
+    KeyUpComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>My First Angular 2 App</h1>\n    <click-me></click-me>\n    <key-up></key-up>\n    <loop-back></loop-back>\n  "
+            selector: 'key-up',
+            template: "\n        <input #box (keyup)=\"onKey(box.value)\">\n        <p>{{values}}</p>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], KeyUpComponent);
+    return KeyUpComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.KeyUpComponent = KeyUpComponent;
+//# sourceMappingURL=keyup.component.js.map

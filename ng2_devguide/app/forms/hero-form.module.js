@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
-var forms_component_1 = require('./forms.component');
 var hero_form_component_1 = require('./hero-form.component');
 var HeroFormModule = (function () {
     function HeroFormModule() {
@@ -23,11 +22,10 @@ var HeroFormModule = (function () {
                 forms_1.FormsModule
             ],
             declarations: [
-                forms_component_1.FormsComponent,
                 hero_form_component_1.HeroFormComponent
             ],
             exports: [
-                forms_component_1.FormsComponent
+                hero_form_component_1.HeroFormComponent
             ]
         }), 
         __metadata('design:paramtypes', [])

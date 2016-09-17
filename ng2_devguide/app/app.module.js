@@ -14,6 +14,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 //import { routing } from './app.routing';
 /* Components */
 var app_component_1 = require('./app.component');
+var user_input_component_1 = require('./user-input.component');
 var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');
 var loop_back_component_1 = require('./loop-back.component');
@@ -26,6 +27,7 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule],
             declarations: [
                 app_component_1.AppComponent,
+                user_input_component_1.UserInputComponent,
                 click_me_component_1.ClickMeComponent,
                 keyup_component_1.KeyUpComponent,
                 loop_back_component_1.LoopbackComponent,

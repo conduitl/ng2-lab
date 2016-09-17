@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var UserInputComponent = (function () {
+    function UserInputComponent() {
     }
-    AppComponent = __decorate([
+    UserInputComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <user-input></user-input>\n  "
+            selector: 'user-input',
+            template: "\n    <h1>Dev Guide: 3. User Input</h1>\n    <click-me></click-me>\n    <key-up></key-up>\n    <loop-back></loop-back>\n    <little-tour></little-tour>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], UserInputComponent);
+    return UserInputComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.UserInputComponent = UserInputComponent;
+//# sourceMappingURL=user-input.component.js.map

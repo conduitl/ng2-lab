@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* Components */
 import { AppComponent }  from './app.component';
+import { UserInputComponent } from './user-input.component';
 import { ClickMeComponent } from './click-me.component';
 import { KeyUpComponent } from './keyup.component';
 import { LoopbackComponent } from './loop-back.component';
@@ -13,7 +14,8 @@ import { LittleTourComponent } from './little-tour.component';
 @NgModule({
   imports:      [ BrowserModule ],
   declarations: [ 
-    AppComponent, 
+    AppComponent,
+    UserInputComponent, 
     ClickMeComponent, 
     KeyUpComponent,
     LoopbackComponent,

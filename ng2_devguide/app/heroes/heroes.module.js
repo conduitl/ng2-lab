@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var heroes_component_1 = require('./heroes.component');
 var hero_list_component_1 = require('./hero-list.component');
+var hero_service_1 = require('./hero.service');
 var HeroesModule = (function () {
     function HeroesModule() {
     }
@@ -26,6 +27,9 @@ var HeroesModule = (function () {
             ],
             exports: [
                 heroes_component_1.HeroesComponent
+            ],
+            providers: [
+                hero_service_1.HeroService
             ]
         }), 
         __metadata('design:paramtypes', [])

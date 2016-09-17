@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_service_1 = require('./hero.service');
-var HeroListComponent = (function () {
-    function HeroListComponent(heroService) {
-        this.heroes = heroService.getHeroes();
+var mock_heroes_1 = require('./mock-heroes');
+var HeroService = (function () {
+    function HeroService() {
     }
-    HeroListComponent = __decorate([
-        core_1.Component({
-            selector: 'hero-list',
-            template: "\n        <div *ngFor=\"let hero of heroes\">\n            {{hero.id}} - {{hero.name}}\n        </div>\n    "
-        }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService])
-    ], HeroListComponent);
-    return HeroListComponent;
+    HeroService.prototype.getHeroes = function () { return mock_heroes_1.HEROES; };
+    HeroService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], HeroService);
+    return HeroService;
 }());
-exports.HeroListComponent = HeroListComponent;
-//# sourceMappingURL=hero-list.component.js.map
+exports.HeroService = HeroService;
+//# sourceMappingURL=hero.service.js.map

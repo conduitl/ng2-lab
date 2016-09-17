@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HeroesComponent } from './heroes.component';
 import { HeroListComponent } from './hero-list.component';
 
+import { HeroService } from './hero.service';
+
 @NgModule({
     imports: [
         CommonModule
@@ -14,6 +16,9 @@ import { HeroListComponent } from './hero-list.component';
     ],
     exports: [
         HeroesComponent
+    ],
+    providers: [
+        HeroService
     ]
 })
 export class HeroesModule { }

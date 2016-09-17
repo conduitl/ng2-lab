@@ -14,13 +14,9 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_routing_1 = require('./app.routing');
 /* Components */
 var app_component_1 = require('./app.component');
-var user_input_component_1 = require('./user-input.component');
-var click_me_component_1 = require('./click-me.component');
-var keyup_component_1 = require('./keyup.component');
-var loop_back_component_1 = require('./loop-back.component');
-var little_tour_component_1 = require('./little-tour.component');
 /* Module Imports */
 var hero_form_module_1 = require('./forms/hero-form.module');
+var user_input_module_1 = require('./user-input/user-input.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,15 +25,11 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 hero_form_module_1.HeroFormModule,
+                user_input_module_1.UserInputModule,
                 app_routing_1.routing
             ],
             declarations: [
-                app_component_1.AppComponent,
-                user_input_component_1.UserInputComponent,
-                click_me_component_1.ClickMeComponent,
-                keyup_component_1.KeyUpComponent,
-                loop_back_component_1.LoopbackComponent,
-                little_tour_component_1.LittleTourComponent,
+                app_component_1.AppComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

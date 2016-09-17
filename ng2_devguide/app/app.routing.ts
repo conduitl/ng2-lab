@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { UserInputComponent } from './user-input.component';
+import { UserInputComponent } from './user-input/user-input.component';
 import { HeroFormComponent } from './forms/hero-form.component'
 
 const appRoutes: Routes = [

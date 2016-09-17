@@ -6,28 +6,20 @@ import { routing } from './app.routing';
 
 /* Components */
 import { AppComponent }  from './app.component';
-import { UserInputComponent } from './user-input.component';
-import { ClickMeComponent } from './click-me.component';
-import { KeyUpComponent } from './keyup.component';
-import { LoopbackComponent } from './loop-back.component';
-import { LittleTourComponent } from './little-tour.component';
 
 /* Module Imports */
 import { HeroFormModule } from './forms/hero-form.module';
+import { UserInputModule } from './user-input/user-input.module';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
     HeroFormModule,
+    UserInputModule,
     routing
   ],
   declarations: [ 
-    AppComponent,
-    UserInputComponent,
-    ClickMeComponent, 
-    KeyUpComponent,
-    LoopbackComponent,
-    LittleTourComponent,
+    AppComponent
   ],
   bootstrap:    [ AppComponent ]
 })

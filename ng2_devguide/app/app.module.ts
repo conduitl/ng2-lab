@@ -8,14 +8,14 @@ import { routing } from './app.routing';
 /* Components */
 import { AppComponent }  from './app.component';
 import { UserInputComponent } from './user-input.component';
-import { FormsComponent } from './forms.component';
 import { ClickMeComponent } from './click-me.component';
 import { KeyUpComponent } from './keyup.component';
 import { LoopbackComponent } from './loop-back.component';
 import { LittleTourComponent } from './little-tour.component';
 
 /* 5. Forms */
-import { HeroFormComponent } from './hero-form.component';
+import { FormsComponent } from './forms/forms.component';
+import { HeroFormComponent } from './forms/hero-form.component';
 
 @NgModule({
   imports:      [ 

@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserInputComponent } from './user-input.component';
-import { FormsComponent } from './forms.component';
+import { FormsComponent } from './forms/forms.component';
 
 const appRoutes: Routes = [
     {

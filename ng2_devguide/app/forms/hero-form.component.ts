@@ -3,7 +3,7 @@ import { Hero } from './hero';
 
 @Component({
     selector: 'hero-form',
-    templateUrl: 'app/hero-form.component.html'
+    templateUrl: 'app/forms/hero-form.component.html'
 })
 export class HeroFormComponent {
     powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];

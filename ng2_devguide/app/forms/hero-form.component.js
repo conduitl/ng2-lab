@@ -33,7 +33,7 @@ var HeroFormComponent = (function () {
     HeroFormComponent = __decorate([
         core_1.Component({
             selector: 'hero-form',
-            templateUrl: 'app/hero-form.component.html'
+            templateUrl: 'app/forms/hero-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], HeroFormComponent);

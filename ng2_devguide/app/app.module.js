@@ -16,13 +16,13 @@ var app_routing_1 = require('./app.routing');
 /* Components */
 var app_component_1 = require('./app.component');
 var user_input_component_1 = require('./user-input.component');
-var forms_component_1 = require('./forms.component');
 var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');
 var loop_back_component_1 = require('./loop-back.component');
 var little_tour_component_1 = require('./little-tour.component');
 /* 5. Forms */
-var hero_form_component_1 = require('./hero-form.component');
+var forms_component_1 = require('./forms/forms.component');
+var hero_form_component_1 = require('./forms/hero-form.component');
 var AppModule = (function () {
     function AppModule() {
     }

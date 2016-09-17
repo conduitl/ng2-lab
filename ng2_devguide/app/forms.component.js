@@ -15,7 +15,7 @@ var FormsComponent = (function () {
     FormsComponent = __decorate([
         core_1.Component({
             selector: 'forms',
-            template: "<h1>Dev Guide: 5. Forms</h1>"
+            template: "\n        <h1>Dev Guide: 5. Forms</h1>\n        <hero-form></hero-form>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], FormsComponent);

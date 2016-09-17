@@ -20,6 +20,7 @@ import { HeroFormComponent } from './hero-form.component';
 @NgModule({
   imports:      [ 
     BrowserModule,
+    FormsModule,
     routing
   ],
   declarations: [ 
@@ -29,7 +30,8 @@ import { HeroFormComponent } from './hero-form.component';
     ClickMeComponent, 
     KeyUpComponent,
     LoopbackComponent,
-    LittleTourComponent
+    LittleTourComponent,
+    HeroFormComponent     // 5. Forms from here
   ],
   bootstrap:    [ AppComponent ]
 })

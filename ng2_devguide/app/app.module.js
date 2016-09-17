@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 /* Routing */
 var app_routing_1 = require('./app.routing');
 /* Components */
@@ -20,6 +21,8 @@ var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');
 var loop_back_component_1 = require('./loop-back.component');
 var little_tour_component_1 = require('./little-tour.component');
+/* 5. Forms */
+var hero_form_component_1 = require('./hero-form.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,6 +30,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 app_routing_1.routing
             ],
             declarations: [
@@ -36,7 +40,8 @@ var AppModule = (function () {
                 click_me_component_1.ClickMeComponent,
                 keyup_component_1.KeyUpComponent,
                 loop_back_component_1.LoopbackComponent,
-                little_tour_component_1.LittleTourComponent
+                little_tour_component_1.LittleTourComponent,
+                hero_form_component_1.HeroFormComponent // 5. Forms from here
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

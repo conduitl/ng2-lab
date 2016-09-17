@@ -1,6 +1,5 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 /* Routing */
 import { routing } from './app.routing';
@@ -13,25 +12,22 @@ import { KeyUpComponent } from './keyup.component';
 import { LoopbackComponent } from './loop-back.component';
 import { LittleTourComponent } from './little-tour.component';
 
-/* 5. Forms */
-import { FormsComponent } from './forms/forms.component';
-import { HeroFormComponent } from './forms/hero-form.component';
+/* Module Imports */
+import { HeroFormModule } from './forms/hero-form.module';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
-    FormsModule,
+    HeroFormModule,
     routing
   ],
   declarations: [ 
     AppComponent,
     UserInputComponent,
-    FormsComponent, 
     ClickMeComponent, 
     KeyUpComponent,
     LoopbackComponent,
     LittleTourComponent,
-    HeroFormComponent     // 5. Forms from here
   ],
   bootstrap:    [ AppComponent ]
 })

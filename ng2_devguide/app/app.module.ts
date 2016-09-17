@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 /* Routing */
-//import { routing } from './app.routing';
+import { routing } from './app.routing';
 
 /* Components */
 import { AppComponent }  from './app.component';
@@ -12,7 +12,10 @@ import { KeyUpComponent } from './keyup.component';
 import { LoopbackComponent } from './loop-back.component';
 import { LittleTourComponent } from './little-tour.component';
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ 
+    BrowserModule,
+    routing
+  ],
   declarations: [ 
     AppComponent,
     UserInputComponent, 

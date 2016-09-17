@@ -1,1 +1,1 @@
-{"version":3,"file":"app.routing.js","sourceRoot":"","sources":["app.routing.ts"],"names":[],"mappings":""}
+{"version":3,"file":"app.routing.js","sourceRoot":"","sources":["app.routing.ts"],"names":[],"mappings":";AAAA,uBAAqC,iBAAiB,CAAC,CAAA;AAEvD,qCAAmC,wBAAwB,CAAC,CAAA;AAE5D,IAAM,SAAS,GAAW;IACtB;QACI,IAAI,EAAE,YAAY,EAAE,SAAS,EAAE,yCAAkB;KACpD;CACJ,CAAC;AAEW,eAAO,GAAG,qBAAY,CAAC,OAAO,CAAC,SAAS,CAAC,CAAC"}

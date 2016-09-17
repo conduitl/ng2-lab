@@ -15,7 +15,7 @@ var UserInputComponent = (function () {
     UserInputComponent = __decorate([
         core_1.Component({
             selector: 'user-input',
-            template: "\n    <h1>Dev Guide: 3. User Input</h1>\n    <click-me></click-me>\n    <key-up></key-up>\n    <loop-back></loop-back>\n    <little-tour></little-tour>\n    "
+            template: "\n    <h1>Dev Guide: 4. User Input</h1>\n    <click-me></click-me>\n    <key-up></key-up>\n    <loop-back></loop-back>\n    <little-tour></little-tour>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], UserInputComponent);

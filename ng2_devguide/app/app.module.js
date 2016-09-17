@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 /* Routing */
-//import { routing } from './app.routing';
+var app_routing_1 = require('./app.routing');
 /* Components */
 var app_component_1 = require('./app.component');
 var user_input_component_1 = require('./user-input.component');
@@ -24,7 +24,10 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [
+                platform_browser_1.BrowserModule,
+                app_routing_1.routing
+            ],
             declarations: [
                 app_component_1.AppComponent,
                 user_input_component_1.UserInputComponent,

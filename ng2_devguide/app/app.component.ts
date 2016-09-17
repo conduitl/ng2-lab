@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
-    <user-input></user-input>
+    <h1>Dev Guide</h1>
+    <nav>
+      <a routerLink="/user-input" routerLinkActive="active">User Input</a>
+    </nav>
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent { }

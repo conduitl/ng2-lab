@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+/* Routing */
+//import { routing } from './app.routing';
+/* Components */
 var app_component_1 = require('./app.component');
 var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');

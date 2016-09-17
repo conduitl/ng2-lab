@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <nav>
       <a routerLink="/user-input" routerLinkActive="active">User Input</a>
       <a routerLink="/hero-form" routerLinkActive="active">Forms</a>
+      <a routerLink="/di" routerLinkActive="active">Dependency Injection</a>
     </nav>
     <router-outlet></router-outlet>
   `

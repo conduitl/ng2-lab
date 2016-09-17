@@ -1,7 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserInputComponent } from './user-input/user-input.component';
-import { HeroFormComponent } from './forms/hero-form.component'
+import { HeroFormComponent } from './forms/hero-form.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 const appRoutes: Routes = [
     {
@@ -9,6 +10,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'hero-form', component: HeroFormComponent
+    },
+    {
+        path: 'di', component: HeroesComponent
     }
 ];
 

@@ -17,6 +17,7 @@ var app_component_1 = require('./app.component');
 /* Module Imports */
 var hero_form_module_1 = require('./forms/hero-form.module');
 var user_input_module_1 = require('./user-input/user-input.module');
+var heroes_module_1 = require('./heroes/heroes.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,6 +27,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 hero_form_module_1.HeroFormModule,
                 user_input_module_1.UserInputModule,
+                heroes_module_1.HeroesModule,
                 app_routing_1.routing
             ],
             declarations: [

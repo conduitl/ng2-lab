@@ -15,6 +15,7 @@ var app_routing_1 = require('./app.routing');
 /* Components */
 var app_component_1 = require('./app.component');
 var user_input_component_1 = require('./user-input.component');
+var forms_component_1 = require('./forms.component');
 var click_me_component_1 = require('./click-me.component');
 var keyup_component_1 = require('./keyup.component');
 var loop_back_component_1 = require('./loop-back.component');
@@ -31,6 +32,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 user_input_component_1.UserInputComponent,
+                forms_component_1.FormsComponent,
                 click_me_component_1.ClickMeComponent,
                 keyup_component_1.KeyUpComponent,
                 loop_back_component_1.LoopbackComponent,

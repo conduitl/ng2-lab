@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var FormsComponent = (function () {
+    function FormsComponent() {
     }
-    AppComponent = __decorate([
+    FormsComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Dev Guide</h1>\n    <nav>\n      <a routerLink=\"/user-input\" routerLinkActive=\"active\">User Input</a>\n      <a routerLink=\"/forms\" routerLinkActive=\"active\">Forms</a>\n    </nav>\n    <router-outlet></router-outlet>\n  "
+            selector: 'forms',
+            template: "<h1>Dev Guide: 5. Forms</h1>"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], FormsComponent);
+    return FormsComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.FormsComponent = FormsComponent;
+//# sourceMappingURL=forms.component.js.map

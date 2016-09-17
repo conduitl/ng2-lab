@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
     <h1>Dev Guide</h1>
     <nav>
       <a routerLink="/user-input" routerLinkActive="active">User Input</a>
+      <a routerLink="/forms" routerLinkActive="active">Forms</a>
     </nav>
     <router-outlet></router-outlet>
   `

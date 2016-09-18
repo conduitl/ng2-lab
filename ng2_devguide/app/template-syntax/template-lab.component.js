@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var TemplateLabComponent = (function () {
+    function TemplateLabComponent() {
     }
-    AppComponent = __decorate([
+    TemplateLabComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Dev Guide</h1>\n    <nav>\n      <a routerLink=\"/user-input\" routerLinkActive=\"active\">User Input</a>\n      <a routerLink=\"/hero-form\" routerLinkActive=\"active\">Forms</a>\n      <a routerLink=\"/di\" routerLinkActive=\"active\">Dependency Injection</a>\n      <a routerLink=\"/template\" routerLinkActive=\"active\">Template Syntax</a>\n    </nav>\n    <router-outlet></router-outlet>\n  "
+            selector: 'template-lab',
+            template: '<h1>Template Lab</h1>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TemplateLabComponent);
+    return TemplateLabComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TemplateLabComponent = TemplateLabComponent;
+//# sourceMappingURL=template-lab.component.js.map

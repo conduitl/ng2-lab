@@ -11,6 +11,7 @@ import { AppComponent }  from './app.component';
 import { HeroFormModule } from './forms/hero-form.module';
 import { UserInputModule } from './user-input/user-input.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { TemplateModule } from './template-syntax/template.module';
 
 /* Providers */
 import { Logger } from './logger.service';
@@ -21,6 +22,7 @@ import { Logger } from './logger.service';
     HeroFormModule,
     UserInputModule,
     HeroesModule,
+    TemplateModule,
     routing
   ],
   declarations: [ 

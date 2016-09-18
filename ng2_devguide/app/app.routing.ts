@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserInputComponent } from './user-input/user-input.component';
 import { HeroFormComponent } from './forms/hero-form.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { TemplateLabComponent } from './template-syntax/template-lab.component';
 
 const appRoutes: Routes = [
     {
@@ -13,6 +14,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'di', component: HeroesComponent
+    },
+    {
+        path: 'template', component: TemplateLabComponent
     }
 ];
 

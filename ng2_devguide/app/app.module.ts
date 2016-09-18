@@ -12,6 +12,9 @@ import { HeroFormModule } from './forms/hero-form.module';
 import { UserInputModule } from './user-input/user-input.module';
 import { HeroesModule } from './heroes/heroes.module';
 
+/* Providers */
+import { Logger } from './logger.service';
+
 @NgModule({
   imports:      [ 
     BrowserModule,
@@ -22,6 +25,9 @@ import { HeroesModule } from './heroes/heroes.module';
   ],
   declarations: [ 
     AppComponent
+  ],
+  providers: [
+    Logger
   ],
   bootstrap:    [ AppComponent ]
 })

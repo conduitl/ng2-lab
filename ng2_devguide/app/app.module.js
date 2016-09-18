@@ -18,6 +18,8 @@ var app_component_1 = require('./app.component');
 var hero_form_module_1 = require('./forms/hero-form.module');
 var user_input_module_1 = require('./user-input/user-input.module');
 var heroes_module_1 = require('./heroes/heroes.module');
+/* Providers */
+var logger_service_1 = require('./logger.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,6 +34,9 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent
+            ],
+            providers: [
+                logger_service_1.Logger
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

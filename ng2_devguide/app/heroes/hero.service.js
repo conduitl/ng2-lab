@@ -12,16 +12,19 @@ var core_1 = require('@angular/core');
 var mock_heroes_1 = require('./mock-heroes');
 var logger_service_1 = require('../logger.service');
 var HeroService = (function () {
-    function HeroService(logger) {
+    function HeroService(logger, isAuthorized) {
         this.logger = logger;
+        this.isAuthorized = isAuthorized;
     }
     HeroService.prototype.getHeroes = function () {
-        this.logger.log('Getting heroes ...');
-        return mock_heroes_1.HEROES;
+        var _this = this;
+        var auth = this.isAuthorized ? 'authorized' : 'unauthorized';
+        this.logger.log('Getting heroes for ${auth} user.');
+        return mock_heroes_1.HEROES.filter(function (hero) { return _this.isAuthorized || !hero.isSecret; });
     };
     HeroService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [logger_service_1.Logger])
+        __metadata('design:paramtypes', [logger_service_1.Logger, Boolean])
     ], HeroService);
     return HeroService;
 }());

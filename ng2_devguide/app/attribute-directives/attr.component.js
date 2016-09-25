@@ -15,7 +15,7 @@ var AttrComponent = (function () {
     AttrComponent = __decorate([
         core_1.Component({
             selector: 'attr-guide',
-            template: "\n        <h2>Attribute Directives</h2>\n    "
+            templateUrl: 'app/attribute-directives/attr.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AttrComponent);

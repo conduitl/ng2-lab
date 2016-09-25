@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var attr_component_1 = require('./attr.component');
+var highlight_directive_1 = require('./highlight.directive');
 var AttrModule = (function () {
     function AttrModule() {
     }
@@ -20,7 +21,8 @@ var AttrModule = (function () {
                 common_1.CommonModule
             ],
             declarations: [
-                attr_component_1.AttrComponent
+                attr_component_1.AttrComponent,
+                highlight_directive_1.HighlightDirective
             ],
             exports: [
                 attr_component_1.AttrComponent

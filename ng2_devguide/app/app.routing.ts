@@ -4,6 +4,7 @@ import { UserInputComponent } from './user-input/user-input.component';
 import { HeroFormComponent } from './forms/hero-form.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { TemplateLabComponent } from './template-syntax/template-lab.component';
+import { AttrComponent } from './attribute-directives/attr.component';
 
 const appRoutes: Routes = [
     {
@@ -17,6 +18,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'template', component: TemplateLabComponent
+    },
+    {
+        path: 'attr', component: AttrComponent
     }
 ];
 

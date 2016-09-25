@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
       <a routerLink="/hero-form" routerLinkActive="active">Forms</a>
       <a routerLink="/di" routerLinkActive="active">Dependency Injection</a>
       <a routerLink="/template" routerLinkActive="active">Template Syntax</a>
+      <a routerLink="/attr" routerLinkActive="active">Attribute Directives</a>
     </nav>
     <router-outlet></router-outlet>
   `

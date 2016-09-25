@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var AttrComponent = (function () {
+    function AttrComponent() {
     }
-    AppComponent = __decorate([
+    AttrComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Dev Guide</h1>\n    <nav>\n      <a routerLink=\"/user-input\" routerLinkActive=\"active\">User Input</a>\n      <a routerLink=\"/hero-form\" routerLinkActive=\"active\">Forms</a>\n      <a routerLink=\"/di\" routerLinkActive=\"active\">Dependency Injection</a>\n      <a routerLink=\"/template\" routerLinkActive=\"active\">Template Syntax</a>\n      <a routerLink=\"/attr\" routerLinkActive=\"active\">Attribute Directives</a>\n    </nav>\n    <router-outlet></router-outlet>\n  "
+            selector: 'attr-guide',
+            template: "\n        <h2>Attribute Directives</h2>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AttrComponent);
+    return AttrComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AttrComponent = AttrComponent;
+//# sourceMappingURL=attr.component.js.map

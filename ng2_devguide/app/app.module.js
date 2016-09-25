@@ -19,6 +19,7 @@ var hero_form_module_1 = require('./forms/hero-form.module');
 var user_input_module_1 = require('./user-input/user-input.module');
 var heroes_module_1 = require('./heroes/heroes.module');
 var template_module_1 = require('./template-syntax/template.module');
+var attr_module_1 = require('./attribute-directives/attr.module');
 /* Providers */
 var logger_service_1 = require('./logger.service');
 var AppModule = (function () {
@@ -32,6 +33,7 @@ var AppModule = (function () {
                 user_input_module_1.UserInputModule,
                 heroes_module_1.HeroesModule,
                 template_module_1.TemplateModule,
+                attr_module_1.AttrModule,
                 app_routing_1.routing
             ],
             declarations: [

@@ -13,9 +13,17 @@ var HighlightDirective = (function () {
     function HighlightDirective(el, renderer) {
         this.el = el;
         this.renderer = renderer;
+        this._defaultColor = 'red';
     }
+    Object.defineProperty(HighlightDirective.prototype, "defaultColor", {
+        set: function (colorName) {
+            this._defaultColor = colorName || this._defaultColor;
+        },
+        enumerable: true,
+        configurable: true
+    });
     HighlightDirective.prototype.onMouseEnter = function () {
-        this.highlight('yellow');
+        this.highlight(this.highlightColor || this._defaultColor);
     };
     HighlightDirective.prototype.onMouseLeave = function () {
         this.highlight(null);
@@ -23,6 +31,15 @@ var HighlightDirective = (function () {
     HighlightDirective.prototype.highlight = function (color) {
         this.renderer.setElementStyle(this.el.nativeElement, 'backgroundColor', color);
     };
+    __decorate([
+        core_1.Input('myHighlight'), 
+        __metadata('design:type', String)
+    ], HighlightDirective.prototype, "highlightColor", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String), 
+        __metadata('design:paramtypes', [String])
+    ], HighlightDirective.prototype, "defaultColor", null);
     __decorate([
         core_1.HostListener('mouseenter'), 
         __metadata('design:type', Function), 

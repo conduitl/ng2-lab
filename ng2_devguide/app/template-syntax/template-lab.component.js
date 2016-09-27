@@ -11,6 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TemplateLabComponent = (function () {
     function TemplateLabComponent() {
+        this.hero = {
+            firstName: 'Tom'
+        };
+        this.heroImageUrl = 'http://cache.lego.com/r/catalogs/-/media/catalogs/characters/dc/mugshots/mugshot%202016/76061_1to1_mf_batman_336.png?l.r2=-798905063';
+        this.isUnchanged = true;
     }
     TemplateLabComponent = __decorate([
         core_1.Component({

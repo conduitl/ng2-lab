@@ -1,1 +1,48 @@
 <h1>Template Lab</h1>
+<h2>Fundamentals</h2>
+<p> What is the event loop and how does it work?</p>
+<h2>Interpolation</h2>
+<p>Interpolation is the simplest example of NG2 template syntax. For example, 
+    the hero variable in the component contains {{hero.firstName}}
+</p>
+<h3>Template Expressions</h3>
+<p>What are some examples of JavaScript expressions that are not permitted in template expressions?</p>
+<h3>Expression context</h3>
+<p>The component is part of the expression context. What other objects can be part of the expression context?</p>
+<p>What are some use cases for including objects other than the component in the exprssion context?</p>
+<p>What are template reference variables?</p>
+<h3>Guidelines for template expressions</h3>
+<ul>
+    <li>No visible side effects</li>
+    <li>Quick execution</li>
+    <li>Simplicity</li>
+    <li>Idempotence</li>
+</ul>
+<h3>Template statements</h3>
+<p>A template statement responds to an event raised by a binding target such as an element, component, or directive.</p>
+<p>Template statements have side effecs. We use them to update application state from user input.</p>
+<h3>Statement context</h3>
+<p>Template statements cannot refer to anything in the global namespace.</p>
+<h2>Binding syntax</h2>
+<p>What is the difference between an HTML attribute and a DOM property?</p>
+<p><b>Template binding works with properties and events, not attributes.</b></p>
+<h3>Binding targets</h3>
+<h3>Property binding</h3>
+<p>Binding image <i>src</i> property to an url</p>
+<img [src]="heroImageUrl">
+<hr />
+<p>Button disabled example</p>
+<button class="btn btn-default" [disabled]="isUnchanged">Cancel is disabled</button>
+<p>Setting a property of a directive.</p>
+<div [ngClass]="classes">[ngClass] binding to the classes property</div>
+<p>An element property between enclosing square brackets identifies the target property.</p>
+
+<p>Important note from angular docs about side effects. The expression could call something like getFoo(). Only we know what getFoo() does. If getFoo() changes something an we happen to be binding to that something, we risk an unpleasant experience. Angular may or may no display the changed value. Angular may detect the change and throw a warnin error. Our general advice: stick to data properties and to methods that return values and do no more.</p>
+<h4>The brackets []</h4>
+<p>The brackets tell Angular to evaluate the template expression. If it is omitted, Angula treats the string as a constant and initializes the target property with that string.
+<h4>Omit brackets [] when all of the following are true:</h4>
+<ul>
+    <li>The target property accepts a string value.</li>
+    <li>The string is a fixed value that we can back into the template.</li>
+    <li>This initial value never changes.</li>
+</ul>

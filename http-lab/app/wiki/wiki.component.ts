@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 import { WikipediaService } from './wikipedia.service';
 
@@ -7,7 +8,7 @@ import { WikipediaService } from './wikipedia.service';
     selector: 'my-wiki',
     template: `
         <h1>Wikipedia Demo</h1>
-        <p><i>Fetches after each keystroke</i></p>
+        <p><i>Fetches when typing stops</i></p>
 
         <input #term (keyup)="search(term.value)"/>
         <ul>
@@ -17,11 +18,17 @@ import { WikipediaService } from './wikipedia.service';
     providers: [WikipediaService]
 })
 export class WikiComponent {
-    items: Observable<string[]>;
 
     constructor (private wikipediaService: WikipediaService) { }
 
+    private searchTermStream = new Subject<string>();
+
     search (term: string) {
-        this.items = this.wikipediaService.search(term);
+        this.searchTermStream.next(term);
     }
+
+    items: Observable<string[]> = this.searchTermStream
+        .debounceTime(300)
+        .distinctUntilChanged()
+        .switchMap((term: string) => this.wikipediaService.search(term));
 }

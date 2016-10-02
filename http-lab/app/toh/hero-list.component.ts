@@ -23,12 +23,12 @@ export class HeroListComponent implements OnInit {
             );
     }
 
-    // addHero (name: string) {
-    //     if (!name) { return; }
-    //     this.heroService.addHero(name)
-    //         .subscribe(
-    //             hero => this.heroes.push(hero),
-    //             error => this.errorMessage = <any>error
-    //         );
-    // }
+    addHero (name: string) {
+        if (!name) { return; }
+        this.heroService.addHero(name)
+            .subscribe(
+                hero => this.heroes.push(hero),
+                error => this.errorMessage = <any>error
+            );
+    }
 }

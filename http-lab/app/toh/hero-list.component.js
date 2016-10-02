@@ -21,6 +21,14 @@ var HeroListComponent = (function () {
         this.heroService.getHeroes()
             .subscribe(function (heroes) { return _this.heroes = heroes; }, function (error) { return _this.errorMessage = error; });
     };
+    HeroListComponent.prototype.addHero = function (name) {
+        var _this = this;
+        if (!name) {
+            return;
+        }
+        this.heroService.addHero(name)
+            .subscribe(function (hero) { return _this.heroes.push(hero); }, function (error) { return _this.errorMessage = error; });
+    };
     HeroListComponent = __decorate([
         core_1.Component({
             selector: 'hero-list',

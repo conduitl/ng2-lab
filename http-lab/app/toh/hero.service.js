@@ -21,6 +21,14 @@ var HeroService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
+    HeroService.prototype.addHero = function (name) {
+        var body = JSON.stringify({ name: name });
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(this.heroesUrl, body, options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
     HeroService.prototype.extractData = function (res) {
         var body = res.json();
         return body.data || {};

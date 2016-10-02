@@ -17,7 +17,7 @@ var AppComponent = (function () {
         // not in module instead?
         core_1.Component({
             selector: 'http-lab',
-            template: "\n    <h1>HTTP Lab</h1>\n    <hero-list></hero-list>\n  "
+            template: "\n    <h1>HTTP Lab</h1>\n    <hero-list></hero-list>\n    <my-wiki></my-wiki>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

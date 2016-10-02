@@ -16,6 +16,7 @@ var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
 var hero_data_1 = require('./toh/hero-data');
 var hero_module_1 = require('./toh/hero.module');
 var app_component_1 = require('./app.component');
+var wiki_component_1 = require('./wiki/wiki.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,7 +30,10 @@ var AppModule = (function () {
                 hero_module_1.HeroModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_data_1.HeroData)
             ],
-            declarations: [app_component_1.AppComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                wiki_component_1.WikiComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

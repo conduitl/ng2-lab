@@ -9,6 +9,7 @@ import { HeroData } from './toh/hero-data';
 import { HeroModule } from './toh/hero.module';
 
 import { AppComponent }   from './app.component';
+import { WikiComponent } from './wiki/wiki.component';
 
 @NgModule({
   imports:      [ 
@@ -19,7 +20,10 @@ import { AppComponent }   from './app.component';
       HeroModule,
       InMemoryWebApiModule.forRoot(HeroData)
   ],
-  declarations: [ AppComponent ],
+  declarations: [ 
+    AppComponent,
+    WikiComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

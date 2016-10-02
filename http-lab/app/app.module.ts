@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HeroData } from './toh/hero-data';
+
 import { HeroModule } from './toh/hero.module';
 
 import { AppComponent }   from './app.component';
@@ -13,7 +16,8 @@ import { AppComponent }   from './app.component';
       FormsModule,
       HttpModule,
       JsonpModule,
-      HeroModule
+      HeroModule,
+      InMemoryWebApiModule.forRoot(HeroData)
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]

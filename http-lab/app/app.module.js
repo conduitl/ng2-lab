@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
+var hero_data_1 = require('./toh/hero-data');
 var hero_module_1 = require('./toh/hero.module');
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
@@ -24,7 +26,8 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 http_1.JsonpModule,
-                hero_module_1.HeroModule
+                hero_module_1.HeroModule,
+                angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_data_1.HeroData)
             ],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]

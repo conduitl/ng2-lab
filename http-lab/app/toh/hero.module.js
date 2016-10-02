@@ -9,19 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-require('./rxjs-operators'); // not in module instead?
-var AppComponent = (function () {
-    function AppComponent() {
+var common_1 = require('@angular/common');
+var hero_list_component_1 = require('./hero-list.component');
+var hero_service_1 = require('./hero.service');
+var HeroModule = (function () {
+    function HeroModule() {
     }
-    AppComponent = __decorate([
-        // not in module instead?
-        core_1.Component({
-            selector: 'http-lab',
-            template: "\n    <h1>HTTP Lab</h1>\n    <hero-list></hero-list>\n  "
+    HeroModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule
+            ],
+            declarations: [
+                hero_list_component_1.HeroListComponent
+            ],
+            exports: [
+                hero_list_component_1.HeroListComponent
+            ],
+            providers: [
+                hero_service_1.HeroService
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroModule);
+    return HeroModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroModule = HeroModule;
+//# sourceMappingURL=hero.module.js.map
